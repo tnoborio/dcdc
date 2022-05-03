@@ -1,0 +1,16 @@
+services:
+  app:
+    image: clojure:openjdk-19-tools-deps-1.11.1.1113
+    command: clj -X:repl-server
+    working_dir: /app
+    volumes:
+      - .:/app
+      - app-m2:/root/.m2
+    ports:
+      - 8890:8890
+      - 5555:5555
+    environment:
+      - M2_HOME=/app/.m2
+
+volumes:
+  app-m2:

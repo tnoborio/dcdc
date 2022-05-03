@@ -1,0 +1,6 @@
+.clj-kondo
+.cpcache
+output.calva-repl
+.lsp
+.nrepl-port
+
